@@ -45,7 +45,7 @@
         div[id="PSchild-2-icon-container"] {
             height : 60px ;
             width : 90px ;
-            margin-left : 3vh ;
+            padding-left : 13% ;
         }
         div[class="PS-icon-making"] {
             height : 44px  ;
@@ -61,19 +61,25 @@
             background-color : white ;
             transform : rotate(-50deg) ;
         }
-        #PS-main-icon {
-            height : 30px ;
-            width : 30px ;
-            display : flex ;
-            justify-content : center ;
-            align-items : center ;
-            border-radius : 50% ;
-        }
-        div[class="PS-sub-icons"] {
-            border-radius : 50% ;
-        }
         i {
             color : #3B3C3C ;
+            line-height : 3vh ;
+            padding : 1.3vh ;
+        }
+        div[class="PSchild-3"] {
+            height : 100% ;
+            width : 100% ;
+            padding-left : 19% ;
+        }
+        div[class="PSchild-3"]:hover {
+            background-color : #CDD5E4 ;
+            border-radius : 13px ;
+        }
+        i:hover {
+            color : #000 ;
+        }
+        div[class="PSchild-3"] span:hover {
+            font-size:large ;
         }
     </style>
 </head>
@@ -87,60 +93,56 @@
                 </div>
                 <div class="PSchild-2">
                     <div class="PSchild-3">
-                        <i class="fa-light fa-house fa-3x"></i>
+                        <i class="fa-solid fa-house fa-2x"></i>
                         <span>Home</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-magnifying-glass fa-3x"></i>
+                        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
                         <span>Explore</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-bell fa-3x"></i>
+                        <i class="fa-solid fa-bell fa-2x"></i>
                         <span>Notifications</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-envelope fa-3x"></i>
+                        <i class="fa-solid fa-envelope fa-2x"></i>
                         <span>Messages</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-circle-notch fa-3x"></i>
+                        <i class="fa-solid fa-circle-notch fa-2x"></i>
                         <span>Grok</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-file-lines fa-3x"></i>
+                        <i class="fa-solid fa-file-lines fa-2x"></i>
                         <span>Lists</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-bookmark fa-3x"></i>
+                        <i class="fa-solid fa-bookmark fa-2x"></i>
                         <span>Bookmarks</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-briefcase fa-3x"></i>
+                        <i class="fa-solid fa-briefcase fa-2x"></i>
                         <span>Jobs</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-person-military-to-person fa-3x"></i>
+                        <i class="fa-solid fa-person-military-to-person fa-2x"></i>
                         <span>Communities</span>
                     </div>
                     <div class="PSchild-3">
-                        <div class="PS-icon-making" id="icon-1"></div>
-                        <div class="PS-icon-making" id="icon-2"></div>
+                        <i class="fa-brands fa-x-twitter fa-2x"></i>
                         <span>Premium</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-cloud-bolt fa-3x"></i>
+                        <i class="fa-solid fa-cloud-bolt fa-2x"></i>
                         <span>Verified Orgs</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-light fa-user fa-3x"></i>
+                        <i class="fa-solid fa-user fa-2x"></i>
                         <span>Profile</span>
                     </div>
                     <div class="PSchild-3">
-                        <div id="PS-main-icon">
-                            <div class="PS-sub-icons"></div>
-                            <div class="PS-sub-icons"></div>
-                            <div class="PS-sub-icons"></div>
-                        </div>
+                            <i class="fa-solid fa-comment-dots fa-2x" id="PS-more"></i>
+                            <span>More</span>
                     </div>
                 </div>
                 <div class="PSchild-2"></div>
@@ -150,5 +152,6 @@
     </div>
     <div id = "PS-main-1"></div>
     <div id = "PS-advertise"></div>
+    <script src = "/js/script.js"></script>
 </body>
 </html>
