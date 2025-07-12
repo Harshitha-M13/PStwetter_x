@@ -47,6 +47,9 @@
             width : 90px ;
             padding-left : 13% ;
         }
+        .PSclick-changes {
+            color : #000 ;
+        }
         div[class="PS-icon-making"] {
             height : 44px  ;
             width : 3px ;
@@ -55,13 +58,13 @@
         }
         #icon-1 {
             background-color : #000 ;
-            transform : rotate(50deg) ;
+            transform : skewX(-45deg);
         }
         #icon-2 {
             background-color : white ;
-            transform : rotate(-50deg) ;
+            transform : skewX(45deg) ;
         }
-        i {
+        .PSclick-changes {
             color : #3B3C3C ;
             line-height : 3vh ;
             padding : 1.3vh ;
@@ -75,11 +78,20 @@
             background-color : #CDD5E4 ;
             border-radius : 13px ;
         }
-        i:hover {
-            color : #000 ;
-        }
-        div[class="PSchild-3"] span:hover {
+        .PS-click-bold {
             font-size:large ;
+        }
+        button[type="button"] {
+            height : 50px ;
+            width : 99% ;
+            margin-left : 13% ;
+            background-color : #0F1418 ;
+            color : white ;
+            border-radius : 33px ;
+        }
+        button[type="button"]:hover {
+            background-color : #4E4F4F ;
+            color : white ;
         }
     </style>
 </head>
@@ -93,59 +105,61 @@
                 </div>
                 <div class="PSchild-2">
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-house fa-2x"></i>
-                        <span>Home</span>
+                        <i class="fa-solid fa-house fa-2x PSclick-changes"></i>
+                        <span class="PS-onclick-bold">Home</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-magnifying-glass fa-2x"></i>
-                        <span>Explore</span>
+                        <i class="fa-solid fa-magnifying-glass fa-2x PSclick-changes"></i>
+                        <span class="PS-onclick-bold">Explore</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-bell fa-2x"></i>
-                        <span>Notifications</span>
+                        <i class="fa-solid fa-bell fa-2x PSclick-changes"></i>
+                        <span class="PS-onclick-bold">Notifications</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-envelope fa-2x"></i>
-                        <span>Messages</span>
+                        <i class="fa-solid fa-envelope fa-2x PSclick-changes"></i>
+                        <span class="PS-onclick-bold">Messages</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-circle-notch fa-2x"></i>
-                        <span>Grok</span>
+                        <i class="fa-solid fa-circle-notch fa-2x PSclick-changes"></i>
+                        <span class="PS-onclick-bold">Grok</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-file-lines fa-2x"></i>
-                        <span>Lists</span>
+                        <i class="fa-solid fa-file-lines fa-2x PSclick-changes"></i>
+                        <span class="PS-onclick-bold">Lists</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-bookmark fa-2x"></i>
-                        <span>Bookmarks</span>
+                        <i class="fa-solid fa-bookmark fa-2x PSclick-changes"></i>
+                        <span class="PS-onclick-bold">Bookmarks</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-briefcase fa-2x"></i>
-                        <span>Jobs</span>
+                        <i class="fa-solid fa-briefcase fa-2x PSclick-changes"></i>
+                        <span class="PS-click-bold">Jobs</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-person-military-to-person fa-2x"></i>
-                        <span>Communities</span>
+                        <i class="fa-solid fa-person-military-to-person fa-2x PSclick-changes"></i>
+                        <span class="PS-click-bold">Communities</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-brands fa-x-twitter fa-2x"></i>
-                        <span>Premium</span>
+                        <i class="fa-brands fa-x-twitter fa-2x PSclick-changes"></i>
+                        <span class="PS-click-bold">Premium</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-cloud-bolt fa-2x"></i>
-                        <span>Verified Orgs</span>
+                        <i class="fa-solid fa-cloud-bolt fa-2x PSclick-changes"></i>
+                        <span class="PS-click-bold">Verified Orgs</span>
                     </div>
                     <div class="PSchild-3">
-                        <i class="fa-solid fa-user fa-2x"></i>
-                        <span>Profile</span>
+                        <i class="fa-solid fa-user fa-2x PSclick-changes"></i>
+                        <span class="PS-click-bold">Profile</span>
                     </div>
                     <div class="PSchild-3">
-                            <i class="fa-solid fa-comment-dots fa-2x" id="PS-more"></i>
-                            <span>More</span>
+                            <i class="fa-solid fa-comment-dots fa-2x PSclick-changes" id="PS-more"></i>
+                            <span class="PS-click-bold">More</span>
                     </div>
                 </div>
-                <div class="PSchild-2"></div>
+                <div class="PSchild-2">
+                    <button type="button">Post</button>
+                </div>
             </div>
             <div class="PSchild-1"></div>
         </nav>
