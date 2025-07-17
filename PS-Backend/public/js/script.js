@@ -1,5 +1,6 @@
 let navBarElePS = document.querySelectorAll(".PSchild-3") ;
 let topNavElePS = document.querySelectorAll(".topNavElePS") ;
+let followBtnPS = document.querySelectorAll(".PS-suggest-btn") ;
 
 for(let i = 0 ; i < navBarElePS.length ; i++) {
     navBarElePS[i].addEventListener("click" , () => {
@@ -18,5 +19,16 @@ for(let i = 0 ; i < topNavElePS.length ; i++) {
             ele.children[1].classList.add("rm-ele-PS") ;
         });
         topNavElePS[i].children[1].classList.remove("rm-ele-PS") ;
+    });
+}
+
+for(let i = 0 ; i < followBtnPS.length ; i++) {
+    followBtnPS[i].addEventListener("click" , () => {
+        if(followBtnPS[i].innerText === "Follow") {
+            followBtnPS[i].innerText = "Unfollow" ;  
+        }
+        else if(followBtnPS[i].innerText === "Unfollow") {
+            followBtnPS[i].innerText = "Follow" ;  
+        }
     });
 }

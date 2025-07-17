@@ -1,0 +1,89 @@
+<div id = "navBarEle">
+    <nav>
+        <div class="PSchild-1">
+            <div id="PSchild-2-icon-container">
+                <div class="PS-icon-making" id="icon-1"></div>
+                <div class="PS-icon-making" id="icon-2"></div>
+            </div>
+            <div class="PSchild-2">
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-house fa-2x PSclick-changes"></i>
+                    <span class="PS-onclick-bold">Home</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-magnifying-glass fa-2x PSclick-changes"></i>
+                    <span class="PS-onclick-bold">Explore</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-bell fa-2x PSclick-changes"></i>
+                    <span class="PS-onclick-bold">Notifications</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-envelope fa-2x PSclick-changes"></i>
+                    <span class="PS-onclick-bold">Messages</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-circle-notch fa-2x PSclick-changes"></i>
+                    <span class="PS-onclick-bold">Grok</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-file-lines fa-2x PSclick-changes"></i>
+                    <span class="PS-onclick-bold">Lists</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-bookmark fa-2x PSclick-changes"></i>
+                    <span class="PS-onclick-bold">Bookmarks</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-briefcase fa-2x PSclick-changes"></i>
+                    <span class="PS-click-bold">Jobs</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-person-military-to-person fa-2x PSclick-changes"></i>
+                    <span class="PS-click-bold">Communities</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-brands fa-x-twitter fa-2x PSclick-changes"></i>
+                    <span class="PS-click-bold">Premium</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-cloud-bolt fa-2x PSclick-changes"></i>
+                    <span class="PS-click-bold">Verified Orgs</span>
+                </div>
+                <div class="PSchild-3">
+                    <i class="fa-solid fa-user fa-2x PSclick-changes"></i>
+                    <span class="PS-click-bold">Profile</span>
+                </div>
+                <div class="PSchild-3">
+                        <i class="fa-solid fa-comment-dots fa-2x PSclick-changes" id="PS-more"></i>
+                        <span class="PS-click-bold">More</span>
+                </div>
+            </div>
+            <div class="PSchild-2">
+                <button type="button">Post</button>
+            </div>
+        <% for(let i = 0 ; i < data.length ; i++) {
+            console.log("ParvatiammaShivappa , muddu") ;
+            let rmKeyAndFormArr = Object.values(data[i]) ; 
+            let noKey = rmKeyAndFormArr[0] ; %>
+        
+
+                <div class="PSchild-1" id="profileInfoPS">
+                    <div class="PS-child-2-of-1" id="profileImg">
+                        <img src="<%= noKey.profilePicPS %>" alt="<%= rmKeyAndFormArr.id %>'s profile pic">
+                    </div>
+                    <div class="PS-child-2-of-1">
+                        <h3><%= noKey.id %></h3>
+                        <h4><%= noKey.referedAs %></h4>
+                    </div>
+                    <div class="PS-child-2-of-1">
+                        <div id="PS-main-3Dot-container">
+                            <div class="PS-sub-3Dots"></div>
+                            <div class="PS-sub-3Dots"></div>
+                            <div class="PS-sub-3Dots"></div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+    </nav>
+</div>

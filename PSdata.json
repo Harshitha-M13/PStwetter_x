@@ -1,0 +1,104 @@
+[
+  {
+    "MahadevMahadevi": {
+      "id": "MahadevMahadevi",
+      "referedAs": "@mahadeviMahadev" ,
+      "profilePicPS" : "https://i.pinimg.com/736x/24/4e/64/244e645ff7f9331cc7c754bdcbf979c5.jpg" ,
+      "followers": "uncountable",
+      "following": "infinite",
+      "postMessage" : "We are creators , we are enjoying by looking at what we have created..." ,
+      "highlights" : [
+          {
+            "highlights1" : "https://i.ebayimg.com/images/g/ckoAAOSwzkVnj1Kt/s-l400.jpg" ,
+            "highlights2" : "https://i.pinimg.com/736x/8b/75/5f/8b755fcbc59391b3eecd4235bf05bfb3.jpg" ,
+            "highlights3" : "https://i.pinimg.com/736x/44/a6/50/44a650179b2aaf60186369aaacd84265.jpg"
+          } 
+      ] ,
+      "posts": [
+          {
+          "image": "https://i.pinimg.com/736x/f8/cb/82/f8cb82a7e68c475983d7efd20b08a338.jpg" ,
+          "likes": 3000,
+          "comments": 41
+          },
+          {
+          "image": "https://i.pinimg.com/736x/b1/11/8c/b1118c36bcf5acf032ba06600c429e27.jpg",
+          "likes": 2500,
+          "comments": 32
+          },
+          {
+          "image": "https://i.pinimg.com/736x/5f/b3/4c/5fb34c21c58eb646968b6be488dc288b.jpg",
+          "likes": 5000,
+          "comments": 6
+          }
+      ]
+    }  
+  } ,
+  {
+    "cats":  {
+      "id": "cats",
+      "referedAs": "@cats" ,
+      "profilePicPS" : "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg" ,
+      "followers": 25000,
+      "following": 5,
+      "postMessage" : "We are creation , we are enjoying the creation which has been created by creation" ,
+      "highlights" : [
+        {
+          "highlights1" : "https://idsb.tmgrup.com.tr/ly/uploads/images/2022/05/16/205719.jpg" ,
+          "highlights2" : "https://cdn.shopify.com/s/files/1/0252/5197/1119/files/10-20-1.png?v=1697775317" ,
+          "highlights3" : "https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3NodXR0ZXJzdG9jay0yMjc4Nzc2MTg3LWhlcm8uanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9fX0="
+        } 
+      ] ,
+      "posts": [
+        {
+          "image": "https://plus.unsplash.com/premium_photo-1677545182067-26ac518ef64f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "likes": 200,
+          "comments": 17
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "likes": 312,
+          "comments": 19
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1577023311546-cdc07a8454d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2F0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "likes": 1065,
+          "comments": 200
+        }
+      ]
+    } 
+  } ,
+  {
+    "dogs": {
+      "id": "dogs",
+      "referedAs": "@dogs" ,
+      "profilePicPS" : "https://images.pexels.com/photos/1108099/pexels-photo-1108099.jpeg" ,
+      "followers": 75000,
+      "following": 150,
+      "postMessage" : "We are creation , we are enjoying the creation which has been created by creation" ,
+      "highlights" : [
+        {
+          "highlights1" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU8TtbcMkcpRuYlqx83u1rO44jK3SQ67JuZQ&s" ,
+          "highlights2" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQM_8CN1vEA6oBh1ZHB3P6fYynKAA9y89Kztg&s" ,
+          "highlights3" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScwMeR3cdbQaUAElCz_aF7nrIBC-FH6MTmHQ&s"
+        } 
+      ] ,
+      "posts": [
+        {
+          "image": "https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZG9nc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
+          "likes": 3000,
+          "comments": 41
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGRvZ3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+          "likes": 2500,
+          "comments": 32
+        },
+        {
+          "image": "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGRvZ3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60",
+          "likes": 500,
+          "comments": 6
+        }
+      ]
+    } 
+  }
+] 
