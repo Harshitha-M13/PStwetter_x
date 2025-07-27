@@ -21,34 +21,39 @@
             <div class="post-PS">
                 <div class="post-sub-1-PS">
                     <div class="post-sub-1-profilePic-PS">
-                        <img src="<%= Data.profilePicPS %>" alt="<%= data.id %>'s profile pic" class="img-profile-PS">
+                        <img src="<%= Data.profilePicPS %>" alt="<%= Data.id %>'s profile pic" class="img-profile-PS">
                     </div>
                     <div class="post-sub-1-profileInfo-PS">
                         <h3><%= Data.id %></h3>
                         <h4><%= Data.referedAs %></h4>
                     </div>
-                    <form action="/PS-Backend/index.js" class="putUpdate-PS">
+                    <form action="http://localhost:333/PSx.com/posts/update/<%= Data.id %>" class="putUpdate-PS">
                         <button>Update entire post</button>
+                    </form>
+                    <form method="post" action="http://localhost:333/PSx.com/posts/delete/<%= Data.id %>?_method=DELETE" class="delete-PS">
                         <button>Delete</button>
                     </form>
                 </div>
                 <div class="post-sub-2-PS">
                     <p> <%= Data.postMessage %> </p>
-                    <form action="#PS">
+                    <form action="http://localhost:333/PSx.com/posts/<%= Data.id %>/PSedit/PostMessage">
                         <button>Update post message</button>
                     </form>
                 </div>
                 <div class="post-sub-3-PS">
                     <div class="recentPost-PS">
-                            <% let recentPost = Data.posts[Data.posts.length - 1] ; %>
-                            <img src="<%= recentPost.image %>" alt="recent-post-PS" id="postMessagePic-PS">
-                            <div class="additionalInfoImg-container-PS">
-                                <div class="addInfo-sub-PS"> <%= recentPost.likes %>_likes </div>
-                                <div class="addInfo-sub-PS"> <%= recentPost.comments %>_comments </div>
-                                <form action="#PS">
-                                    <button id="PS-delete-img">Update image</button>
-                                </form>
-                            </div>
+                                <% let recentPost = Data.posts[Data.posts.length - 1] ; %>
+                                <img src="<%= recentPost.image %>" alt="recent-post-PS" id="postMessagePic-PS">
+                                <div class="additionalInfoImg-container-PS">
+                                    <div class="addInfo-sub-PS"> <%= recentPost.likes %>_likes </div>
+                                    <div class="addInfo-sub-PS"> <%= recentPost.comments %>_comments </div>
+                                    <form action="/PSx.com/posts/<%= Data.id %>/PSedit/PostImg">
+                                        <button id="PS-delete-img">Update image</button>
+                                    </form>
+                                    <form action="http://localhost:333/PSx.com/posts/<%= Data.id %>">
+                                        <button id="PS-delete-img">See in detail</button>
+                                    </form>
+                                </div>
                     </div>
                 </div>
             </div>
@@ -89,6 +94,7 @@
             </div>
         </div>
     </div>
+    <a href="http://localhost:333/PSx.com/posts/new">Create new post PS</a>
     <script src = "/js/script.js"></script>
 </body>
 </html>

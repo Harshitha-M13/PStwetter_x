@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParvatiammaShivappa show in more detail</title>
+    <link 
+    rel="stylesheet"
+    href="/css/style.css">
+    <style>
+        .post-sub-3-PS {
+            width : 99% ;
+        }
+        form[class="PSpostImg"] {
+            height : 63px ;
+            width : 100% ;
+        }
+        label[for="PSpostImg"]::after {
+            content : ":" ;
+        }
+        input {
+            height : 33px ;
+            width : 63% ;
+        }
+        button[id="PS-delete-img"] {
+            width : 19% ;
+        }
+    </style>
+</head>
+<body>
+    <%  console.log("ParvatiammaShivappa , muddu") ;
+        let user = Object.values(findId)[0] ;
+        console.log(user) ; %>
+        <div id="posts-displayPS-container">
+            <div class="post-PS">
+                <div class="post-sub-1-PS">
+                    <div class="post-sub-1-profilePic-PS">
+                        <img src="<%= user.profilePicPS %>" alt="<%= user.id %>'s profile pic" class="img-profile-PS">
+                    </div>
+                    <div class="post-sub-1-profileInfo-PS">
+                        <h3><%= user.id %></h3>
+                        <h4><%= user.referedAs %></h4>
+                    </div>
+                </div>
+                <div class="post-sub-2-PS">
+                    <p> <%= user.postMessage %> </p>
+                </div>
+                <div class="post-sub-3-PS">
+                    <div class="recentPost-PS">
+                                <img src="https://i.pinimg.com/736x/62/01/0d/62010d848b790a2336d1542fcda51789.jpg" alt="recent-post-PS" id="postMessagePic-PS">
+                                <div class="additionalInfoImg-container-PS">
+                                    <form method="post" class="PSpostImg" action="/PSx.com/posts/<%= user.id %>/postImg?_method=PATCH">
+                                        <label for="PSpostImg">Update Post Image</label>
+                                        <input type="text" placeholder="Enter the post image url" name="PSpostImg" id="PSpostImg">
+                                        <button id="PS-delete-img">submit</button>
+                                    </form>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

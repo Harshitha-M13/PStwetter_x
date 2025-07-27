@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParvatiammaShivappa create new post</title>
+    <link
+    rel="stylesheet"
+    href="/css/stylePSnewData.css">
+    <style>
+        #update-query-container {
+            background-image : url("https://wallpapers-clan.com/wp-content/uploads/2024/09/pink-tiger-in-jungle-preppy-aesthetic-desktop-wallpaper-cover.jpg") ;
+            background-size : cover ;
+        }
+        #PS-sub-container {
+            height : 600px ;
+            transform : translate(-190px , 130px) ;
+            background-color : rgba(255 , 255 , 255 , 0.6) ;
+            backdrop-filter : blur(1.3px) ;
+            box-shadow : 3px 3px 9px #B73F72 ;
+        }
+        label {
+            color : #B73F72 ;
+        }
+        button {
+            background-color : #F3BCC7 ;
+            border : 3px solid #B73F72  ;
+            border-radius : 33px ;
+            height : 44px ;
+        }
+        input {
+            height : 44px ;
+            width : 63% ;
+        }
+        div[class="PS-sub-divs"] {
+            padding-left : 33px ;
+            height : 64px ;
+            width : 100% ;
+            display : flex ;
+            flex-direction : row ;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="http://localhost:333/PSx.com/posts/<%= findId.id %>?_method=PUT">
+        <div id="update-query-container">
+            <div id="PS-sub-container">
+                <div id="post-Message" class="PS-sub-divs">
+                    <label for="username" class="forAfter">username</label>
+                    <input type="text" placeholder="Enter the user-id" name="username" id="username" value="<%= findId.id %>">
+                </div>
+                <div id="post-img" class="PS-sub-divs">
+                    <label for="postMessage" class="forAfter">Post Message</label>
+                    <input type="text" placeholder="Enter the post message" name="postMessage" id="postMessage">
+                </div>
+                <div id="post-img" class="PS-sub-divs">
+                    <label for="profilePicPS" class="forAfter">Profile Pic</label>
+                    <input type="text" placeholder="Enter the profile url" name="profilePicPS" id="profilePicPS">
+                </div>
+                <div id="post-img" class="PS-sub-divs">
+                    <label for="postImage" class="forAfter">Post image</label>
+                    <input type="text" placeholder="Enter the Post url" name="postImage" id="postImage">
+                </div>
+                <button>Submit</button>
+            </div>
+        </div>
+    </form>
+    <script src="/js/scriptPSnewData.js"></script>
+</body>
+</html>

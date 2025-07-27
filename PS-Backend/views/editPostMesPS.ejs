@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParvatiammaShivappa show in more detail</title>
+    <link 
+    rel="stylesheet"
+    href="/css/style.css">
+    <style>
+        .post-sub-2-PS {
+            height : 64px ;
+            width : 100% ;
+        }
+        form[class="PS-update-postMes"] {
+            height : 64px ;
+            width : 100% ;
+            display : flex ;
+            flex-direction : row ;
+        }
+        label {
+            display : flex ;
+            align-items : center ;
+        }
+        input {
+            height : 39px ;
+            width : 63% ;
+            margin : 13px 3px 3px ;
+        }
+        button {
+            width : calc(100% - 83%) ;
+            margin : 13px 0px 0px ;
+        }
+    </style>
+</head>
+<body>
+    <%  console.log("ParvatiammaShivappa , muddu") ;
+        let user = Object.values(findId)[0] ;
+        console.log(user) ; %>
+        <div id="posts-displayPS-container">
+            <div class="post-PS">
+                <div class="post-sub-1-PS">
+                    <div class="post-sub-1-profilePic-PS">
+                        <img src="<%= user.profilePicPS %>" alt="<%= user.id %>'s profile pic" class="img-profile-PS">
+                    </div>
+                    <div class="post-sub-1-profileInfo-PS">
+                        <h3><%= user.id %></h3>
+                        <h4><%= user.referedAs %></h4>
+                    </div>
+                </div>
+                <div class="post-sub-2-PS">
+                    <form method="POST" class="PS-update-postMes" action="http://localhost:333/PSx.com/posts/<%= user.id %>/postMes?_method=PATCH" >
+                        <label for="PSpostMes">Update post message</label>
+                        <input type="text" Placeholder="Enter the post message" name="postMessagePS" id="PSpostMes" value="<%= user.postMessage %>" >
+                        <button>Submit</button>
+                    </form>
+                </div>
+                <div class="post-sub-3-PS">
+                    <div class="recentPost-PS">
+
+                                <% let recentPost = user.posts[user.posts.length - 1] ; %>
+                                <img src="<%= recentPost.image %>" alt="recent-post-PS" id="postMessagePic-PS">
+                                <div class="additionalInfoImg-container-PS">
+                                    <div class="addInfo-sub-PS"> <%= recentPost.likes %>_likes </div>
+                                    <div class="addInfo-sub-PS"> <%= recentPost.comments %>_comments </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
