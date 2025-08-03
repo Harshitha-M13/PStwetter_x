@@ -333,6 +333,7 @@ button[class="PS-suggest-btn"] {
 }
 
 a {
+    margin-left : 26vw ;
     height : 63px ;
     width : 100% ;
     text-align : center ;

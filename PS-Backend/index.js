@@ -2,7 +2,7 @@ const express = require("express") ;
 const app = express() ;
 const port = 333 ;
 const path = require("path") ;
-const twetterPSdata = require("../PSdata.json") ;
+let twetterPSdata = require("../PSdata.json") ;
 const methodOverride = require("method-override") ;
 
 app.set("view engine" , "ejs") ;
@@ -10,6 +10,7 @@ app.set("views" , path.join(__dirname ,"views")) ;
 app.use(express.static(path.join(__dirname + "/public"))) ;
 app.use(express.urlencoded( { extended : true } )) ;
 app.use(methodOverride("_method")) ;
+app.use(express.json()) ;
 
 app.use((req , res , next) => {
     console.log(`ParvatiammaShivappa , request received`) ;
@@ -17,8 +18,7 @@ app.use((req , res , next) => {
 });
 
 app.get("/PSx.com/posts" , (req ,res) => {
-    let data = twetterPSdata ;
-    res.render("home.ejs" , { data }) ;
+    res.render("home.ejs" , { twetterPSdata }) ;
 });
 app.get("/PSx.com/posts/new" , (req , res) => {
     res.render("../../PS-Backend/views/createNewPostPS.ejs");
@@ -29,7 +29,7 @@ app.post("/PSx.com/posts" , (req , res) => {
     let referedAs = "@" + id ; 
     let image = postImage ;
     twetterPSdata.forEach((PSdata) => {
-        const rmKey = Object.values(PSdata)[0] ;
+        let rmKey = Object.values(PSdata)[0] ;
         if(rmKey.id === username) {
             rmKey.posts.push({
                                 image,
@@ -38,8 +38,8 @@ app.post("/PSx.com/posts" , (req , res) => {
                             }) ;
         }
         else if((rmKey.id != username) && (rmKey.id != "dogs") && (rmKey.id != "cats")) {
-            let newObjPS = {
-                username : {
+            let newObjPS = {} ;
+            newObjPS[username] = {
                     id,
                     referedAs,
                     profilePicPS,
@@ -51,10 +51,12 @@ app.post("/PSx.com/posts" , (req , res) => {
                             comments : 0
                         }
                     ]
-                }
-            } ;
+            }
+            console.log("parvatiammaShivappa") ;
+            console.log(newObjPS) ;
             twetterPSdata.push(newObjPS) ;
         }
+        console.log(twetterPSdata) ;
     }) ;
     res.redirect("http://localhost:333/PSx.com/posts") ;
 }) ;
@@ -135,8 +137,8 @@ app.delete("/PSx.com/posts/delete/:username" , (req , res) => {
     let newPSdata = twetterPSdata.filter((PSdata) => {
         return !PSdata[username] ;
     }) ;
-    let data = newPSdata ;
-    res.render("home" , { data }) ;
+    twetterPSdata = newPSdata ;
+    res.redirect("/PSx.com/posts") ;
 }) ;
 app.listen(port , () => {
     console.log(`ParvatiammaShivappa , our server is listening on port no ${port}`) ;

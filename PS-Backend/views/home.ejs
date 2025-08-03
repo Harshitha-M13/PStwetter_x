@@ -12,45 +12,45 @@
                 <div class="click-displayElePS rm-ele-PS"></div>
             </div>
         </div>
-            <% for(let i = 0 ; i < data.length ; i++) {
+            <% for(let i = 0 ; i < twetterPSdata.length ; i++) {
         console.log("ParvatiammaShivappa , muddu") ;
-        let rmKeyAndFormArr = Object.values(data[i]) ; 
+        let rmKeyAndFormArr = Object.values(twetterPSdata[i]) ; 
         let noKey = rmKeyAndFormArr[0] ; 
-        let Data = noKey ; %> 
+        let data = noKey ; %> 
         <div id="posts-displayPS-container">
             <div class="post-PS">
                 <div class="post-sub-1-PS">
                     <div class="post-sub-1-profilePic-PS">
-                        <img src="<%= Data.profilePicPS %>" alt="<%= Data.id %>'s profile pic" class="img-profile-PS">
+                        <img src="<%= data.profilePicPS %>" alt="<%= data.id %>'s profile pic" class="img-profile-PS">
                     </div>
                     <div class="post-sub-1-profileInfo-PS">
-                        <h3><%= Data.id %></h3>
-                        <h4><%= Data.referedAs %></h4>
+                        <h3><%= data.id %></h3>
+                        <h4><%= data.referedAs %></h4>
                     </div>
-                    <form action="http://localhost:333/PSx.com/posts/update/<%= Data.id %>" class="putUpdate-PS">
+                    <form action="http://localhost:333/PSx.com/posts/update/<%= data.id %>" class="putUpdate-PS">
                         <button>Update entire post</button>
                     </form>
-                    <form method="post" action="http://localhost:333/PSx.com/posts/delete/<%= Data.id %>?_method=DELETE" class="delete-PS">
+                    <form method="post" action="http://localhost:333/PSx.com/posts/delete/<%= data.id %>?_method=DELETE" class="delete-PS">
                         <button>Delete</button>
                     </form>
                 </div>
                 <div class="post-sub-2-PS">
-                    <p> <%= Data.postMessage %> </p>
-                    <form action="http://localhost:333/PSx.com/posts/<%= Data.id %>/PSedit/PostMessage">
+                    <p> <%= data.postMessage %> </p>
+                    <form action="http://localhost:333/PSx.com/posts/<%= data.id %>/PSedit/PostMessage">
                         <button>Update post message</button>
                     </form>
                 </div>
                 <div class="post-sub-3-PS">
                     <div class="recentPost-PS">
-                                <% let recentPost = Data.posts[Data.posts.length - 1] ; %>
+                                <% let recentPost = data.posts[data.posts.length - 1] ; %>
                                 <img src="<%= recentPost.image %>" alt="recent-post-PS" id="postMessagePic-PS">
                                 <div class="additionalInfoImg-container-PS">
                                     <div class="addInfo-sub-PS"> <%= recentPost.likes %>_likes </div>
                                     <div class="addInfo-sub-PS"> <%= recentPost.comments %>_comments </div>
-                                    <form action="/PSx.com/posts/<%= Data.id %>/PSedit/PostImg">
+                                    <form action="/PSx.com/posts/<%= data.id %>/PSedit/PostImg">
                                         <button id="PS-delete-img">Update image</button>
                                     </form>
-                                    <form action="http://localhost:333/PSx.com/posts/<%= Data.id %>">
+                                    <form action="http://localhost:333/PSx.com/posts/<%= data.id %>">
                                         <button id="PS-delete-img">See in detail</button>
                                     </form>
                                 </div>
@@ -71,10 +71,10 @@
                 </div>
             </form>
             <div id="PS-suggest-id">
-                <% for(let ele of data) {
-                const userName = ["MahadevMahadevi" , "dogs" , "cats"] ;
+                <% for(let ele of twetterPSdata) {
+                const userName = ["MahadevMahadevi" , "dogs" , "cats" , "username"] ;
                 for(let userKey of userName) {
-                    let user = ele[userKey] ;
+                    let user = ele[userKey]  ;
                     if(user) { %>
                         <div class="PS-suggest-container">
                             <div class="PS-suggest">
