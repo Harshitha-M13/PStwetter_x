@@ -71,7 +71,7 @@ app.get("/PSx.com/posts/:username" , (req , res) => {
 app.get("/PSx.com/posts/:username/PSedit/PostMessage" , (req , res) => {
     let { username } = req.params ;
     let findId = twetterPSdata.find((PSdata) => {
-        return PSdata[username] ;
+        return PSdata[username]  ;
     })
     res.render("editPostMesPS" , { findId }) ;
 }) ;
